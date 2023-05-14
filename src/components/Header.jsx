@@ -1,23 +1,27 @@
 import React from 'react';
 
-import '../scss/header.scss';
+import '../scss/app.scss';
 import { Link } from 'react-router-dom';
-import ProfileLogo from '../img/profileLogo.png';
 
 const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        <div className="header__logo">
-          <Link to="/profile" className="header__logoUrl">
-            LOGO NAME
-          </Link>
-        </div>
-
-        <div className="header__user">
-          <img src={ProfileLogo} alt="ProfileLogo" className="header__user__Logo" />
-          <h1 className="header__user__Name">User_name</h1>
-        </div>
+        <Link to="/" className="header__logo">
+          Wild Boars
+        </Link>
+        <ul className="header__menu">
+          <li>
+            <Link to="/about">О компании</Link>
+            <Link to="/services">Услуги</Link>
+            <Link to="/contact">Контакты</Link>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+        <a href="tel:+79263083488" className="header__tel">
+          +7 (926) 308 34-88
+        </a>
       </div>
     </div>
   );
